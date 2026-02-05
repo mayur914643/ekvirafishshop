@@ -1,0 +1,40 @@
+
+:host {
+  display: block;
+}
+
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  margin-top: 64px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  transition: margin-left 0.25s ease;
+  // margin-left: 240px;
+  // padding: 16px;
+  overflow-y: auto;
+  height: calc(100vh - 64px);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.main-content.collapsed {
+  margin-left: 64px;
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    margin-top: 56px;
+  }
+
+  .main-content,
+  .main-content.collapsed {
+    margin-left: 0;
+    height: calc(100vh - 56px);
+  }
+}

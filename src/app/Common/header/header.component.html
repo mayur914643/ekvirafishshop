@@ -1,0 +1,23 @@
+<mat-toolbar class="custom-toolbar">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="onToggle()">
+        <mat-icon>menu</mat-icon>
+    </button> -->
+    <!-- <span>FISH Shop </span> -->
+
+
+    <img [src]="logoPath"  class="toolbar-logo" />
+    <!-- <img src="assets\images\tesssss.jpeg" alt="Logo"> -->
+
+    <span class="example-spacer"></span>
+
+
+    <button mat-icon-button class="example-icon" aria-label="Toggle dark mode" (click)="toggleDarkMode()">
+        <mat-icon>{{ isDarkMode ? 'wb_sunny' : 'dark_mode' }}</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>person</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon matBadge="15">notifications</mat-icon>
+    </button>
+</mat-toolbar>
